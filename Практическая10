@@ -88,3 +88,74 @@ if __name__ == "__main__":
     print("\n>>> Constructor(500, 12, 8, 30)")
     print(">>>", Constructor(500, 12, 8, 30))
 #Задание 6
+def create_list(length, value=None):
+    if value is None:
+        return [0] * length
+    else:
+        return [value] * length
+if __name__ == "__main__":
+    print(">>> create_list(5, 3)")
+    print(">>>", create_list(5, 3))
+    print("\n>>> create_list(3)")
+    print(">>>", create_list(3))
+    print("\n>>> create_list(0, 7)")
+    print(">>>", create_list(0, 7))
+    print("\n>>> create_list(4)")
+    print(">>>", create_list(4))
+    print("\n>>> create_list(2, -5)")
+    print(">>>", create_list(2, -5))
+    print("\n>>> create_list(6, 0)")
+    print(">>>", create_list(6, 0))
+#Задание 7
+def custom_filter(data_list):
+    integers = []
+    for item in data_list:
+        if isinstance(item, int) and not isinstance(item, bool):
+            integers.append(item)
+    divisible_by_7 = []
+    for num in integers:
+        if num % 7 == 0:
+            divisible_by_7.append(num)
+    total_sum = sum(divisible_by_7)
+    print(f"сумма: {total_sum}")
+    return total_sum <= 83
+if __name__ == "__main__":
+    print("print(custom_filter([7, 10.5, 'txt', 14, 2, 56]))")
+    result = custom_filter([7, 10.5, 'txt', 14, 2, 56])
+    print(f">>> {result}")
+    print("\n# Пример 2: Сумма меньше 83")
+    print("custom_filter([7, 14, 21, 28])")
+    result = custom_filter([7, 14, 21, 28])
+    print(f">>> {result}")
+    print("\n# Пример 3: Сумма больше 83")
+    print("custom_filter([70, 14, 'text', 3.14, 7])")
+    result = custom_filter([70, 14, 'text', 3.14, 7])
+    print(f">>> {result}")
+    print("\n# Пример 4: Нет чисел, делящихся на 7")
+    print("custom_filter([1, 2, 3, 'hello', 5.5])")
+    result = custom_filter([1, 2, 3, 'hello', 5.5])
+    print(f">>> {result}")
+    print("\n# Пример 5: Смешанные типы, включая отрицательные числа")
+    print("custom_filter([-7, 0, 77, 14, 'a', 3.14, True, 7])")
+    result = custom_filter([-7, 0, 77, 14, 'a', 3.14, True, 7])
+#Задание 8
+def square(x, y):
+    x_str = str(x)
+    y_str = str(y)
+    width = len(x_str) + len(y_str) + 3 
+    print('_' * width)
+    print(f'| {x} {y} |')
+    print('¯' * width)
+if __name__ == "__main__":
+    print("square(2, 3)")
+    square(2, 3)
+    print("\nsquare(10, 20)")
+    square(10, 20)
+    print("\nsquare(100, 5)")
+    square(100, 5)
+    print("\nsquare(7, 77)")
+    square(7, 77)
+    print("\nsquare(123, 456)")
+    square(123, 456)
+    print("\nsquare(0, 0)")
+    square(0, 0)
