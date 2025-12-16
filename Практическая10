@@ -1,0 +1,90 @@
+#Задание 1
+def upper(t):
+    upper_letters = []
+    for char in t:
+        if char.isupper():
+            upper_letters.append(char)
+    result = ' '.join(upper_letters)
+    return result
+if __name__ == "__main__":
+    print(">>> upper('PriVet')")
+    print(">>>", upper('PriVet'))
+    print("\n>>> upper('Hello World')")
+    print(">>>", upper('Hello World'))
+    print("\n>>> upper('python')")
+    print(">>>", upper('python'))
+    print("\n>>> upper('PYTHON')")
+    print(">>>", upper('PYTHON'))
+#Задание 2
+def punct(txt):
+    punctuation_marks = '!?.,()'
+    count = 0
+    for char in txt:
+        if char in punctuation_marks:
+            count += 1
+    return count
+if __name__ == "__main__":
+    print(">>> punct('(Как дела?)')")
+    print(">>>", punct('(Как дела?)'))
+    print("\n>>> punct('Привет, как дела? Хорошо!')")
+    print(">>>", punct('Привет, как дела? Хорошо!'))
+    print("\n>>> punct('Hello World')")
+    print(">>>", punct('Hello World'))
+    print("\n>>> punct('Это тест... (очень важный)!')")
+    print(">>>", punct('Это тест... (очень важный)!'))
+    print("\n>>> punct('(1) Первый пункт. (2) Второй пункт? (3) Третий пункт!')")
+    print(">>>", punct('(1) Первый пункт. (2) Второй пункт? (3) Третий пункт!'))
+#Задание 3
+def create_cube(x, y):
+    if x <= 0 or y <= 0:
+        print("Длина и высота должны быть положительными числами")
+        return
+    for i in range(y):
+        row = '*' * x
+        print(row)
+if __name__ == "__main__":
+    print(">>> create_cube(5, 3)")
+    create_cube(5, 3)
+    print("\n>>> create_cube(3, 3)")
+    create_cube(3, 3)
+    print("\n>>> create_cube(1, 5)")
+    create_cube(1, 5)
+    print("\n>>> create_cube(7, 2)")
+    create_cube(7, 2)
+#Задание 4
+def double(text):
+    result = ""
+    for char in text:
+        result += char * 2
+    return result
+if __name__ == "__main__":
+    print(">>> double('строка')")
+    print(">>>", double('строка'))
+    print("\n>>> double('hello')")
+    print(">>>", double('hello'))
+    print("\n>>> double('123')")
+    print(">>>", double('123'))
+    print("\n>>> double('Python')")
+    print(">>>", double('Python'))
+    print("\n>>> double('')")
+    print(">>>", double(''))
+    print("\n>>> double('a b c')")
+    print(">>>", double('a b c'))
+#Задание 5
+def Constructor(parts, figures, cars, trees):
+    sets_from_parts = parts // 72
+    sets_from_figures = figures // 4
+    sets_from_cars = cars // 2
+    sets_from_trees = trees // 7
+    min_sets = min(sets_from_parts, sets_from_figures, sets_from_cars, sets_from_trees)
+    return min_sets
+if __name__ == "__main__":
+    print(">>> Constructor(144, 8, 4, 14)")
+    print(">>>", Constructor(144, 8, 4, 14))
+    print("\n>>> Constructor(10000, 16, 6, 2)")
+    print(">>>", Constructor(10000, 16, 6, 2))  
+    print("\n>>> Constructor(720, 40, 20, 70)")
+    print(">>>", Constructor(720, 40, 20, 70))  
+    print("\n>>> Constructor(500, 12, 8, 30)")
+    print(">>>", Constructor(500, 12, 8, 30))
+#Задание 6
